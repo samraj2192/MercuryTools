@@ -17,7 +17,7 @@ public class TestBase {
 	public TestBase(){
 		try{
 			prop = new Properties();
-			FileInputStream FIS = new FileInputStream("C:/Users/sabhowmi/workspace/MercuryTools/src/main/java/com/qa/mercuryTool"
+			FileInputStream FIS = new FileInputStream("C:/Users/sabhowmi/workspace/MercuryTools/src/main/java/com/qa/mercuryTool/"
 								 	+"config/config.properties");
 			prop.load(FIS);
 		}
@@ -33,7 +33,7 @@ public class TestBase {
 		String BrowserName = prop.getProperty("browser");
 		
 		if(BrowserName.equals("chrome")){
-			System.setProperty("Webdriver.chrome.driver", "C:\\Samraj_backup\\Softwares\\Extracted jars\\BrowserDrivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Samraj_backup\\Softwares\\Extracted jars\\BrowserDrivers\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 		
