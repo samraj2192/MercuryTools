@@ -60,13 +60,45 @@ public class RegistrationPage extends TestBase {
 		return RegistrationPageLogo.isDisplayed();
 	}
 	
-	public void newRegistration(String first, String last, String country){
+	public void newRegistration(String first, String last, String phone, String Mail, String address, String city, String Province, String zip, String country, String UN, String PWD){
 		FirstName.sendKeys(first);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
 		LastName.sendKeys(last);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
+		Phone.sendKeys(phone);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
+		Email.sendKeys(Mail);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
+		Address.sendKeys(address);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
+		City.sendKeys(city);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
+		state.sendKeys(Province);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
+		Postal.sendKeys(zip);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
 		Select select = new Select(driver.findElement(By.name("country")));
 		select.selectByVisibleText(country);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
+		username.sendKeys(UN);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
+		Password.sendKeys(PWD);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
+		ConfirmPassword.sendKeys(PWD);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
+		Submit.click();
 	}
 	
 
