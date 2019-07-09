@@ -10,6 +10,7 @@
     <classes>
       <class name="com.qa.mercuryTool.TestCases.HomepageTest"/>
       <class name="com.qa.mercuryTool.TestCases.RegistrationPageTest"/>
+      <class name="com.qa.mercuryTool.TestCases.NewRegistrationTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

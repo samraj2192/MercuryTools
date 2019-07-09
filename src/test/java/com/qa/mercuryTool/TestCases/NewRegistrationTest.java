@@ -1,5 +1,6 @@
 package com.qa.mercuryTool.TestCases;
 
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -12,7 +13,8 @@ import com.qa.mercuryTool.util.Utils;
 public class NewRegistrationTest extends TestBase {
 	HomePage homePage;
 	RegistrationPage registrationPage;
-	String sheetName = "NewRegistration";
+	Utils testUtil;
+//	String sheetName = "NewRegistration";
 	
 	public NewRegistrationTest(){
 		super();
@@ -23,11 +25,12 @@ public class NewRegistrationTest extends TestBase {
 		initialization();
 		homePage = new HomePage();
 		registrationPage = new RegistrationPage();
+		testUtil = new Utils();
 	}
 	
 	@DataProvider
-	public Object[][] getMercuryToursRegistrationData(){
-		Object data[][] = Utils.getTestData(sheetName);
+	public Object[][] getMercuryToursRegistrationData() throws InvalidFormatException{
+		Object data[][] = Utils.getTestData();
 		return data;
 	}
 	
